@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&family=Montserrat:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", monospace;
+}
+
+/* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1rem;
+}
+
+.c {
+    position:absolute;
+
+    top:280px;
+}
+
+
+/* Animation for a circle element */
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: transitionIN 1s, fadeOut 0.5s 0.5s forwards;
+    z-index: 9999;
+}
+
+/* Keyframes for the circle animation */
+@keyframes transitionIN {
+    0% {
+        background: #fff;
+        border-radius: 100%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* Navigation bar styles */
+nav {
+    position: absolute;
+    align-self:auto;
+    top: 80px;
+    margin-left: 40rem;
+    letter-spacing: 3px;
+    font-weight: 900;
+    animation: fadeIn 6s, topDown 2s;
+    border-radius: 25px;
+    background: #fff;
+    box-shadow: 10px 5px 5px rgb(183, 255, 255);
+    padding: 5px;
+}
+
+/* Navigation list item styles */
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Navigation links styles */
+nav ul li a {
+    color: #939393;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.5s;
+    border-radius: 25px;
+    background: #ffffff;
+    padding: 10px;
+    transition: box-shadow 0.5s, color 0.5s;
+}
+
+nav ul li a:hover {
+    color: #9f63c2;
+    box-shadow: 10px 5px 5px rgb(220, 209, 236);
+}
+
+/* Portrait image styles */
+.portrait {
+    scale: 50%;
+    margin-left: 40rem;
+    border-radius: 50%;
+    box-shadow: 10px 5px 5px rgb(220, 209, 236);
+    animation: topDown 2s, float 3s infinite alternate, fadeIn 3s;
+}
+
+/* Gradient background styles */
+#grad1 {
+    background-color: #ffffff;
+}
+
+/* About page */
+#about {
+    position: relative;
+    padding: 90% 0;
+}
+
+.section {
+    position: absolute;
+    top:8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.intro {
+    margin-top:10rem;
+}
+
+/* Greeting text styles */
+.greeting {
+    --bg-size: 400%;
+    --color-one: hsl(194, 44%, 64%);
+    --color-two: hsl(263, 48%, 56%);
+    letter-spacing: -9px;
+    font-weight: 2000;
+    margin-left: 17.2rem;
+    font-size: clamp(3rem, 25vmin, 8rem);
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    border-right: 5px solid;
+    animation: move-bg 8s infinite linear, topDown 2s, fadeIn 3s;
+}
+
+/* Small title styles */
+.smalltitle {
+    --bg-size: 400%;
+    --color-one: hsl(194, 44%, 64%);
+    --color-two: hsl(263, 48%, 56%);
+    letter-spacing: -7px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: clamp(1rem, 13vmin, 8rem);
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    border-right: 5px solid;
+    white-space: nowrap;
+    animation: move-bg 8s infinite linear, topDown 2s, fadeIn 3s, letterspace 3s alternate;
+}
+
+.myself {
+    padding-top: 50px;
+}
+
+/* Subtitle for Description */
+.smallertitle {
+    margin-left: 80px;
+    margin-right:80px;
+    --bg-size: 400%;
+    --color-one: hsl(194, 44%, 64%);
+    --color-two: hsl(263, 48%, 56%);
+    letter-spacing: -4px;
+    font-weight: bolder;
+    font-size: clamp(1rem, 7vmin, 8rem);
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    white-space: nowrap;
+    margin-bottom:15px;
+    animation: move-bg 8s infinite linear, topDown 2s, fadeIn 3s;
+}
+
+/* Keyframes for letter spacing animation */
+@keyframes letterspace {
+    0% {
+        letter-spacing: -7px;
+    }
+    50% {
+        letter-spacing: 4px;
+    }
+    100% {
+        letter-spacing: -7px;
+    }
+}
+
+/* Add this CSS to your style.css file */
+.description1 {
+    margin-left:80px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+    text-align: center;
+}
+
+.right-content {
+    margin-right: 50px;
+    flex: 1;
+}
+
+
+/* Subtitle styles */
+.subtitle {
+    white-space: nowrap;
+    color: #190087;
+    animation: topDown 2s, fadeIn 8s;
+    display: inline-block;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+/* Bar container styles */
+.barcontainer {
+    margin-top: 20px; /* Adjust as needed */
+    width: 400px; /* Adjust the width of the bar container */
+    opacity: 0;
+    background-color: #7921ac;
+    border-radius: 100px;
+    padding: 10px;
+    animation: scaleUp1 2s 2s forwards;
+}
+
+/* Skills text styles */
+.skills {
+    color: white;
+    font-weight: bolder;
+}
+
+/* Keyframes for scaling animation */
+@keyframes scaleUp1 {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    100% {
+        opacity: 1;
+        width: 400px;
+    }
+}
+
+/* Repeat bar container styles for multiple bars */
+/* Bar container 2 */
+.barcontainer2 {
+    margin-top: 20px; /* Adjust as needed */
+    width: 300px; /* Adjust the width of the bar container */
+    opacity: 0;
+    background-color: #7921ac;
+    border-radius: 100px;
+    padding: 10px;
+    animation: scaleUp2 2s 2s forwards;
+}
+
+/* Keyframes for scaling animation 2 */
+@keyframes scaleUp2 {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    100% {
+        opacity: 1;
+        width: 300px;
+    }
+}
+
+/* Bar container 3 */
+.barcontainer3 {
+    margin-top: 20px; /* Adjust as needed */
+    width: 200px; /* Adjust the width of the bar container */
+    opacity: 0;
+    background-color: #7921ac;
+    border-radius: 100px;
+    padding: 10px;
+    animation: scaleUp3 2s 2s forwards;
+}
+
+/* Keyframes for scaling animation 3 */
+@keyframes scaleUp3 {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    100% {
+        opacity: 1;
+        width: 200px;
+    }
+}
+
+/* Bar container 4 */
+.barcontainer4 {
+    font-size: 10px;
+    margin-top: 20px; /* Adjust as needed */
+    width: 100px; /* Adjust the width of the bar container */
+    opacity: 0;
+    background-color: #7921ac;
+    border-radius: 100px;
+    padding: 10px;
+    animation: scaleUp4 2s 2s forwards;
+}
+
+/* Keyframes for scaling animation 4 */
+@keyframes scaleUp4 {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    100% {
+        opacity: 1;
+        width: 100px;
+    }
+}
+
+/* Paragraph styles */
+p {
+    white-space: nowrap;
+    color: #190087;
+    font-size: clamp(1rem, 3vmin, 8rem);
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5%;
+    letter-spacing: 5px;
+    animation: topDown 2s, fadeIn 6s, scaleIn 2s;
+}
+
+/* Underlined text styles */
+p u {
+    color: #7921ac;
+    animation: fadeIn 8s;
+}
+
+/* Description style */
+
+.desc {
+    margin-left: 80px;
+    margin-right:80px;
+    margin-top:40px;
+    text-align: start;
+    letter-spacing: 2px;
+    line-height:50px;
+}
+
+.desc2 {
+    margin-bottom:50px;
+    margin-left: 80px;
+    margin-right:80px;
+    margin-top:40px;
+    text-align: start;
+    letter-spacing: 2px;
+    line-height:50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.imgcontainer {
+    transform: scale(0.7);
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 1s;
+    animation: fadeIn 2s, topDown 2s;
+}
+
+.imgcontainer2 {
+    transform: scale(0.7);
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 1s;
+    animation: fadeIn 2s, topDown 2s;
+}
+
+
+
+
+.textcontainer {
+    position: absolute;
+    top: 5%; /* Position at the top of .imgcontainer */
+    right: 0; /* Position at the left of .imgcontainer */
+    text-align: end;
+    font-size: 22px;
+    background-color: rgba(255, 255, 255, 0.7); /* Add a background color or use your preferred style */
+    padding: 20px; /* Add padding for spacing */
+    transition: transform 1s; /* Add a smooth transition for opacity */
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 18px;
+}
+
+.textcontainer2 {
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
+    position: absolute;
+    bottom: -20px; /* Position at the top of .imgcontainer */
+    width:100%;
+    opacity:0;
+    text-align: center;
+    font-size: 22px;
+    background-color: rgba(255, 255, 255, 0.771); /* Add a background color or use your preferred style */
+    padding: 20px; /* Add padding for spacing */
+    transition: opacity 1s, transform 1s; /* Add a smooth transition for opacity */
+}
+
+.imgcontainer:hover .textcontainer2 {
+    transform: translateY(-50px);
+    opacity: 100%;
+}
+
+.imgcontainer2:hover .textcontainer2 {
+    transform: translateY(-50px);
+    opacity: 100%;
+}
+
+.UI {
+    box-shadow: 0px 0px 100px #b6a8c2;
+    border-radius: 50px;
+    transition:0.5s;
+}
+
+.UI:hover {
+    box-shadow: 0px 0px 70px #beefff;
+    transform:translateY(-5px);
+}
+
+/* Keyframes for scaling animation */
+@keyframes scaleIn {
+    from {
+        scale: 0%;
+    }
+    to {
+        scale: 100%;
+    }
+}
+
+/* Keyframes for moving background gradient */
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}
+
+/* Heading 2 styles */
+h2 {
+    color: #190087;
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-size: 2em;
+    margin-left: 18rem;
+    width: 100%;
+    text-shadow: 0px 2px 2px #E6D1F2;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: topDown 2s, fadeIn 6s;
+}
+
+/* Span inside heading 2 styles */
+h2 span {
+    --bg-size: 400%;
+    --color-one: hsl(194, 44%, 64%);
+    --color-two: hsl(263, 48%, 56%);
+    letter-spacing: 3px;
+    font-weight: 900;
+    text-shadow: 0 0 0;
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 8s infinite linear;
+}
+
+/* Wrapper and secondary texts styles */
+.wrapper {
+    display: flex;
+    text-shadow: 0px 2px 2px #E6D1F2;
+}
+
+.wrapper .sec-texts {
+    height: 39px;
+    line-height: 39px;
+    overflow: hidden;
+}
+
+/* First text styles */
+.wrapper .first-text {
+    color: #190087;
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-size: 2em;
+    margin-left: 18rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fadeIn 6s, topDown 2s;
+}
+
+/* List item styles */
+.sec-texts li {
+    color: #9f63c2;
+    letter-spacing: 3px;
+    position: relative;
+    top:0px;
+    font-weight: 900;
+    font-size: 2em;
+    padding-left: 10px;
+    animation: fadeIn 6s, topDown 2s, rotate 16s steps(4) infinite;
+}
+
+/* Keyframes for list item animation */
+@keyframes rotate {
+    100% {
+        top: -155px;
+    }
+}
+
+/* Span inside list item styles */
+.sec-texts li span {
+    position: relative;
+}
+
+.sec-texts li span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 37px;
+    background-color: #ffffff;
+    border-left: 3px solid;
+    animation: cursor 1s infinite alternate, movement 2s infinite alternate, typing 2s;
+}
+
+/* Button styles */
+button {
+    margin-top: 2%;
+    position: absolute;
+    left: 290px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    animation: fadeIn 6s, topDown 2s;
+    border-radius: 25px;
+    background: #fff;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+button:hover {
+    box-shadow: 10px 5px 5px rgb(183, 255, 255);
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.LinkedIn {
+    margin-left:70px;
+    box-shadow: 0px 0px 70px #ebdef6;
+    background:rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #0077B5; /* LinkedIn's official blue color */
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.LinkedIn i {
+    margin-right: 10px; /* Adjust the spacing between the text and the icon */
+}
+
+.LinkedIn:hover {
+    color:#beefff;
+    transform: translateY(-10px);
+}
+
+/* Coding picture styles */
+.codingpic {
+    width: 80%; /* Adjust the width to your preference */
+    max-width: 400px; /* Set a maximum width to prevent overflowing */
+    border-radius: 100px;
+    box-shadow: 0px 0px 100px #b6a8c2;
+    transition: 0.5s;
+    animation: fadeIn 6s, topDown 2s;
+    margin: 0 auto; /* Center the codingpic */
+}
+
+#projects {
+    margin-top:15%;
+    text-align:center;
+    position: relative;
+    animation: fadeIn 3s, topDown 2s;
+}
+
+.Github {
+    display: inline-block; /* or display: inline-flex; */
+    box-shadow: 0px 0px 70px #ebdef6;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #293841;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.Github i {
+    margin-right: 10px;
+}
+
+.Github:hover {
+    transform:translateY(-5px);
+    color:#83c5db;
+    box-shadow: 0px 0px 70px #beefff;
+}
+
+.projectdesc {
+    margin-top:25px;
+    margin-bottom: 50px;
+}
+
+#contact {
+    margin-top:180px;
+    text-align:center;
+    animation: fadeIn 3s, topDown 2s;
+}
+
+.contactinfo {
+    margin-top:50px;
+    padding-left:40px;
+    padding-right:40px;
+    margin-right:600px;
+    margin-left:600px;
+    box-shadow: 0px 0px 70px #ebdef6;
+    background: rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 20px;
+    color: #293841;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.buttoncontainer {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+}
+
+.LinkedInButton {
+    box-shadow: 0px 0px 70px #ebdef6;
+    background:rgb(255, 255, 255);
+    border-radius: 30px;
+    width:110%;
+    padding: 20px;
+    font-size: 16px;
+    margin-bottom:30px;
+    margin-top:30px;
+    text-decoration: none;
+    color: #0077B5; /* LinkedIn's official blue color */
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.LinkedInButton:hover {
+    transform:translateY(-5px);
+    color:#beefff;
+    box-shadow: 0px 0px 70px #beefff;
+}
+
+.EmailButton {
+    box-shadow: 0px 0px 70px #ebdef6;
+    background:rgb(255, 255, 255);
+    border-radius: 30px;
+    width:110%;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom:30px;
+    margin-top:30px;
+    text-decoration: none;
+    color: #0077B5; /* LinkedIn's official blue color */
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.EmailButton:hover {
+    transform:translateY(-5px);
+    color:#beefff;
+    box-shadow: 0px 0px 70px #beefff;
+}
+
+/* Keyframes for top-down animation */
+@keyframes topDown {
+    from {
+        transform: translateY(-40px);
+    }
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+    from {
+        transform: translateY(-20px);
+    }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for cursor animation */
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Keyframes for movement animation */
+@keyframes movement {
+    100% {
+        left: 100%;
+    }
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
