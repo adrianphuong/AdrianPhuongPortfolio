@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src = "./assets/CIRCLE.png" = class = "circle">
+    <img src="./assets/CIRCLE.png" class="circle">
     <div id="grad1">
         <nav>
-            <ul id = "sidemenu">
+            <ul id="sidemenu">
                 <li><a href="#">home</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="projects.html">projects</a></li>
@@ -19,20 +19,25 @@
             </ul>
         </nav>
     </div>
-            <img src = "./assets/IMG_6213.png" = class = "portrait">
-            <div class="c">
-                <h1 class = "greeting">Hello!</h1>
-                <h2>my name is <span>adrian phuong</span></h2>
-                <div class="wrapper">
-                    <span class="first-text">i'm </span>
-                    <ul class="sec-texts">
-                        <li><span>a developer.</span></li>
-                        <li><span>an artist.</span></li>
-                        <li><span>a student.</span></li>
-                        <li><span>a human.</span></li>
-                    </ul>
+    <div class="intro">
+        <div class="c">
+            <h1 class="greeting">Hello! <img src="./assets/IMG_6213.png" width="300" height="300" id="portrait" alt = "Portrait"/></h1>
+            <h2>my name is <span>adrian phuong</span></h2>
+            <div class="content-container">
+                <div class="text-container">
+                    <div class="wrapper">
+                        <span class="first-text">i'm</span>
+                        <ul class="sec-texts">
+                            <li><span>a developer.</span></li>
+                            <li><span>an artist.</span></li>
+                            <li><span>a student.</span></li>
+                            <li><span>a human.</span></li>
+                        </ul>
+                        <button class="learn" onclick="window.location.href = 'about.html';">learn more</button>
+                    </div>
                 </div>
-            <button onclick="window.location.href = 'about.html';">learn more</button>
+            </div>
         </div>
+    </div>
 </body>
 </html>
